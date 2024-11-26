@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thread</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="comments-container">
+      <h1>Comentarios</h1>
+
+      <div class="comment">
+        <div class="comment-wrapper">
+          <div class="content">
+            <div class="user-photo">
+              <img src="Batman.png" alt="" width="50" />
+            </div>
+            <div class="comment-info">
+              <div class="header">
+                <span class="username">@Batman</span>
+                <span class="date">5hrs ago</span>
+              </div>
+              <div class="text">Este es un comentario</div>
+              <div class="actions">
+                <button>Like</button>
+                <button onclick="toggleReplyForm(this)">Reply</button>
+                <button>Share</button>
+                <button>Follow</button>
+                <button>Report</button>
+              </div>
+            </div>
+          </div>
+          <div class="replies">
+            <!-- Here we will add replies dynamically -->
+          </div>
+          <div class="reply-form" style="display:none;">
+            <textarea placeholder="Escribe tu respuesta..." rows="3"></textarea>
+            <button onclick="addReply(this)">Enviar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="comment">
+        <div class="comment-wrapper">
+          <div class="content">
+            <div class="user-photo">
+              <img src="Dick grayson.jpg" alt="" width="50" />
+            </div>
+            <div class="comment-info">
+              <div class="header">
+                <span class="username">@Night_Wing</span>
+                <span class="date">5hrs ago</span>
+              </div>
+              <div class="text">Este es otro comentario</div>
+              <div class="actions">
+                <button>Like</button>
+                <button onclick="toggleReplyForm(this)">Reply</button>
+                <button>Share</button>
+                <button>Follow</button>
+                <button>Report</button>
+              </div>
+            </div>
+          </div>
+          <div class="replies">
+            <!-- Here we will add replies dynamically -->
+          </div>
+          <div class="reply-form" style="display:none;">
+            <textarea placeholder="Escribe tu respuesta..." rows="3"></textarea>
+            <button onclick="addReply(this)">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleReplyForm(button) {
+        const replyForm = button.closest('.comment-wrapper').querySelector('.reply-form');
+        replyForm.style.display = replyForm.style.display === 'none' ? 'block' : 'none';
+      }
+
+      function addReply(button) {
+        const replyText = button.previousElementSibling.value.trim();
+        if (replyText === '') return;
+
+        const repliesContainer = button.closest('.comment-wrapper').querySelector('.replies');
+        const newReply = document.createElement('div');
+        newReply.classList.add('comment');
+        newReply.innerHTML = `
+          <div class="line"></div>
+          <div class="comment-wrapper">
+            <div class="content">
+              <div class="user-photo">
+                <img src="selina kyle.jpg" alt="" width="50" />
+              </div>
+              <div class="comment-info">
+                <div class="header">
+                  <span class="username">@nuevoUsuario</span>
+                  <span class="date">Ahora</span>
+                </div>
+                <div class="text">${replyText}</div>
+                <div class="actions">
+                  <button>Like</button>
+                  <button>Reply</button>
+                  <button>Share</button>
+                  <button>Follow</button>
+                  <button>Report</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        repliesContainer.appendChild(newReply);
+        button.previousElementSibling.value = ''; // Clear the textarea
+      }
+    </script>
+  </body>
+</html>

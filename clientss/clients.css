@@ -1,0 +1,55 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Estilo para la tabla */
+.tabla-clientes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-clientes th, .tabla-clientes td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-clientes th {
+    background-color: #0a5437;
+    color: white;
+    font-weight: bold;
+}
+
+.tabla-clientes tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-clientes tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para las celdas */
+.tabla-clientes td {
+    color: #555;
+}
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Presentation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <button onclick="scrollToSection('about-us')">About Us</button>
+    <button onclick="scrollToSection('services')">Our Services</button>
+    <button onclick="scrollToSection('contact')">Contact Us</button>
+    <button onclick="scrollToSection('testimonials')">Testimonials</button>
+    <button onclick="scrollToSection('achievements')">Achievements</button>
+  </nav>
+
+  <!-- Header Section with Multiple Backgrounds -->
+  <header>
+    <div class="header-content">
+      <h1>Welcome to Our Company</h1>
+      <p>Innovating the future, today.</p>
+    </div>
+  </header>
+
+  <!-- Flexbox Section for Main Info -->
+  <section id="about-us" class="company-sections">
+    <div class="section about-us">
+      <h2>About Us</h2>
+      <img src="about-us-icon-5.png" alt="About Us" class="section-image">
+      <p>We are a tech company focused on delivering innovative solutions to modern problems. Our vision is to make the world a better place through technology.</p>
+    </div>
+    <div class="section services" id="services">
+      <h2>Our Services</h2>
+      <img src="R.png" alt="Our Services" class="section-image2">
+      <p>We provide a wide range of services including software development, AI research, and data analytics to help businesses grow and innovate.</p>
+    </div>
+    <div class="section contact-us" id="contact">
+      <h2>Contact Us</h2>
+      <img src="logo-gmail-4096.png" alt="Contact Us" class="section-image">
+      <p>Get in touch with us for more information. We are always here to collaborate and provide the best solutions.</p>
+    </div>
+  </section>
+
+  <!-- Grid Section for Services Showcase -->
+  <section class="services-grid">
+    <h2>Services We Offer</h2>
+    <div class="grid-item">
+      <h3>Web Development</h3>
+      <p>We create modern and responsive websites tailored to your business needs.</p>
+    </div>
+    <div class="grid-item">
+      <h3>Mobile Apps</h3>
+      <p>Our mobile apps are designed to provide seamless experiences for users on the go.</p>
+    </div>
+    <div class="grid-item">
+      <h3>Cloud Solutions</h3>
+      <p>We offer scalable and secure cloud solutions to keep your data safe.</p>
+    </div>
+    <div class="grid-item">
+      <h3>AI & ML</h3>
+      <p>Leveraging artificial intelligence to transform data into actionable insights.</p>
+    </div>
+    <div class="grid-item">
+      <h3>Consulting</h3>
+      <p>Expert consulting services to guide you through complex technological challenges.</p>
+    </div>
+    <div class="grid-item">
+      <h3>Data Analytics</h3>
+      <p>We provide comprehensive data analysis to help you make informed business decisions.</p>
+    </div>
+  </section>
+
+  <!-- Subgrid Example for Testimonials -->
+  <section class="testimonials-container" id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="subgrid-item">"Great service and amazing support!"</div>
+    <div class="subgrid-item">"Our project was delivered on time with top quality!"</div>
+    <div class="subgrid-item">"Highly recommend their team for innovative solutions!"</div>
+  </section>
+
+  <!-- Box Model Example for Features -->
+  <section class="feature-boxes">
+    <h2>Our Features</h2>
+    <div class="feature-box">
+      <h3>Innovative</h3>
+      <p>We are constantly innovating to provide cutting-edge solutions.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Reliable</h3>
+      <p>Our services are trusted by businesses worldwide for their reliability.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Scalable</h3>
+      <p>Our solutions are designed to grow with your business needs.</p>
+    </div>
+  </section>
+
+  <!-- List with Counters -->
+  <section class="achievements" id="achievements">
+    <h2>Our Achievements</h2>
+    <ol>
+      <li>100+ Satisfied Clients</li>
+      <li>200+ Projects Completed</li>
+      <li>50+ Awards and Recognitions</li>
+      <li>Global Presence in 10 Countries</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Our Company | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>

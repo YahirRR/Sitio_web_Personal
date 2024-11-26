@@ -1,0 +1,117 @@
+:root {
+    --negro: #0a0d54;
+    --rosa: #f73827;
+    --naranja: #f51f1f;
+    --amarillo: #f40000;
+}
+.container {
+    width: 1200px;
+    margin: 25px auto;
+    background-color: var(--negro);
+    padding: 25px 0;
+}
+h1 {
+    text-align: center;
+    color: var(--amarillo);
+    background-color: rgb(8, 8, 112);
+    margin: 0 25px;
+}  
+
+h2 {
+    text-align: center;
+    color: var(--rosa);
+    background-color: blue;
+    margin: 25px 25px 0px 25px;
+}
+
+h3 {    
+    color: black;
+    text-transform: uppercase;
+    background-color: rgb(4, 95, 57);
+    padding: 2.5px;
+}
+form {
+    margin: 0px 25px;
+}
+
+legend {
+    padding: 25px 0px;
+    color: var(--amarillo);
+    text-transform: uppercase; 
+             
+}
+
+fieldset {
+    margin-top: 0px;
+}
+
+label {
+    color: white;    
+}
+.data-inputs {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 3.5px;
+    margin: 0px;
+}
+
+.lug , .sujetador{
+    display: grid;
+    grid-template-columns: 0.25fr 0.75fr;
+    margin-top: 1.5rem;
+}
+
+.lug, .sujetador label {
+    text-align: right;
+    margin-right: 5px;
+}
+
+.lug-datos {
+    color: white;
+}
+
+.lug-datos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3,1fr);
+    margin-top: 1.5rem;
+    margin-left: 20rem;
+    margin-right: 5px;
+    row-gap: 0.85rem;
+    column-gap: 0.85rem;
+}
+.lug-dato input{
+    width: 100%;
+    margin-top: 0.35rem;
+}
+
+.btn-alinear{
+    text-align: right;
+    margin-top: 1.5rem;
+}
+.btn {
+    background-color: var(--negro);
+    color: var(--rosa);
+    text-transform: uppercase;
+    padding: .75rem 2.5rem;
+    border-color: var(--naranja);
+    border-width: 2.5px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--amarillo);
+    color: var(--negro);
+    border-color: var(--rosa);
+}
+
+input[disabled] {
+    color: red;
+    background-color: var(--negro);
+    border-color: var(--amarillo);
+    font-weight: bold;
+    padding-left: 5.5px;
+}
+
+

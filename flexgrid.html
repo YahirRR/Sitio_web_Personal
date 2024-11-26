@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página combinada</title>
+    
+    <style>
+        body {
+            background-color: rgb(21, 128, 78); /* RGB para AliceBlue */
+        }
+
+        :root {
+            --negro: #eceffe;
+            --dazul: #164f2e;
+            --naran: #2c1f58;
+            --Beige: #21981b;
+        }
+
+
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        iframe {
+            width: 100%;
+            border: none;
+        }
+                /* Navegacion Principal */
+        .nav-bg {
+            background-color: var(--dazul);    
+        }
+        .nav-bg a {
+            color: rgb(241, 243, 242);
+        }
+        .navegacion-principal {
+            display: flex;
+            flex-direction: column;
+        }
+        @media (min-width: 768px) {
+            .navegacion-principal {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .navegacion-principal a {
+            display: block;
+            text-align: center;
+            color: var(rgb(221, 221, 230));
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 1rem;
+
+        }
+        .navegacion-principal a:hover {
+            background-color: #116f2b;
+            color: var(--negro);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="/index.html">Home</a>
+            <a href="/about me/aboutme.html">About me</a>
+            <a href="/clientss/clients.html">Clients</a>
+            <a href="/contact.html">Contact</a>
+     </div>
+
+    <!-- Primer iframe para pagina1.html -->
+    <iframe src="/Flexbox_Grid/index.html" width="100%" height="100%" style="border: none;"></iframe>
+</body>
+</html>
+
